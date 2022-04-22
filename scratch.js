@@ -57,3 +57,57 @@ const output = () => {
 console.log(output());
 //this returns the string containing the unique letters
 console.log(noSpaces);
+
+//create a function that returns the first recurring character in an array
+function firstRecurringCharacter(input) {
+    let seen = {};
+    for (let i = 0; i < input.length; i++) {
+        if (seen[input[i]]) {
+            return input[i];
+        } else {
+            seen[input[i]] = true;
+        }
+    }
+    return undefined;
+}
+firstRecurringCharacter([2, 5, 1, 2, 3, 5, 1, 2, 4]);
+
+//given two arrays, return an array that contains only the elements that are common between the two arrays
+function intersect(nums1, nums2) {
+    let set = new Set();
+    let result = [];
+    for (let i = 0; i < nums1.length; i++) {
+        set.add(nums1[i]);
+    }
+    for (let i = 0; i < nums2.length; i++) {
+        if (set.has(nums2[i])) {
+            result.push(nums2[i]);
+        }
+    }
+    return result;
+}
+
+//Move zeroes: Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+const moveZeroes = function (nums) {
+    for (let i = nums.length; i >= 0; i--) {
+        if (nums[i] === 0) {
+            nums.push(0);
+            nums.splice(i, 1);
+        }
+    }
+};
+
+//two sums: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+const twoSum = function (nums, target) {
+    const seenNums = {};
+    let runningNum;
+
+    for (let i = 0; i <= nums.length - 1; i++) {
+        runningNum = target - nums[i];
+        if (seenNums.hasOwnProperty(runningNum)) {
+            return [seenNums[runningNum], i]
+        } else {
+            seenNums[nums[i]] = i;
+        }
+    }
+};

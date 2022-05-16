@@ -253,7 +253,7 @@ function intersect(nums1, nums2) {
     return result;
 }
 
-//create a binary search tree class that has the following methods: insert, lookup, and remove
+//create a binary search tree class that has the following methods: insert, lookup 
 class Node {
     constructor(value) {
         this.left = null;
@@ -291,9 +291,21 @@ class BinarySearchTree {
         }
     }
     lookup(value) {
-        //Code here
+        if (!this.root) {
+            return false;
+        }
+        let currentNode = this.root;
+        while (currentNode) {
+            if (value < currentNode.value) {
+                currentNode = currentNode.left;
+            } else if (value > currentNode.value) {
+                currentNode = currentNode.right;
+            } else if (currentNode.value === value) {
+                return currentNode;
+            }
+        }
+        return null
     }
-    // remove
 }
 
 const tree = new BinarySearchTree();

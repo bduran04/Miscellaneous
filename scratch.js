@@ -328,3 +328,26 @@ function traverse(node) {
     tree.right = node.right === null ? null : traverse(node.right);
     return tree;
 }  
+
+function sorting() {
+    let arr = [0, 1, 2, 1, 2, 1, 0, 0, 2, 1, 1, 2];
+    let start = 0;
+    let end = arr.length - 1;
+    
+    for (let i = 0; i < arr.length; i++ ) {
+        if (input[i] == 0) {
+            let value = input[start]
+            input[start] = input[i]
+            input[i] = value
+            start++
+          }
+      
+          if (input[i] == 2) {
+            let value = input[end]
+            input[end] = input[i]
+            input[i] = value
+            end--
+          }
+    }
+    return arr;
+}

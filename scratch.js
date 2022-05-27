@@ -40,6 +40,7 @@ function addTogether(num1, num2) {
 function maxSubArray(arr) {
     let maxSum = arr[0];
     let tempSum = 0;
+    
     for (let i = 0; i < arr.length; i++) {
         tempSum += arr[i];
         maxSum = Math.max(maxSum, tempSum);

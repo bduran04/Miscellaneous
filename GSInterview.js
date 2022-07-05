@@ -34,7 +34,7 @@
   //if locate a smaller variable than what is stored in the smallestNum variable, then smallestNum = secondSmallest
 //return secondSmallest
    // todo: implement this function 
-   return 0;
+   return secondSmallest;
  }
  
  [5, 1,2]

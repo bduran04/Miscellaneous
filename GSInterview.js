@@ -27,8 +27,8 @@
    if (x[i] < smallestNum){
      secondSmallest = smallestNum;
      smallestNum = x[i];
-   } if (x[i] < secondSmallest) {
-    secondSmallest = secondSmallest; 
+   } else if (x[i] < secondSmallest && x[i] != smallestNum) {
+    secondSmallest = x[i]; 
    } 
   }
   //if locate a smaller variable than what is stored in the smallestNum variable, then smallestNum = secondSmallest

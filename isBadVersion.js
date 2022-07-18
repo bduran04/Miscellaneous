@@ -26,7 +26,7 @@
         let end = n;
         
         while(start <= end) {
-            //Math.floor is used to round down to the nearest integer; trying to locate the middle of the data 
+            //Math.floor is used to round down to the nearest integer; trying to locate the middle of the data. Adding one since the index starts at 0
             let middle = Math.floor((start + end + 1) / 2)
             if (isBadVersion(middle)) {
                 end = middle - 1;

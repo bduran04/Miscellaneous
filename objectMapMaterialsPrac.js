@@ -1,5 +1,4 @@
-// Step 1: Use the array "materials" and create a dropdown whose possible values
-//         shows all possible "type".
+// Step 1: Use the array "materials" and create a dropdown whose possible values shows all possible "type".
 
 // Step 2: When selecting a dropdown value, show the filtered items that match that type.
 

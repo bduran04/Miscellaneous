@@ -59,16 +59,6 @@ var containsDuplicate = function (nums) {
     return false
 };
 
-//Move zeroes: Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-const moveZeroes = function (nums) {
-    for (let i = nums.length; i >= 0; i--) {
-        if (nums[i] === 0) {
-            nums.push(0);
-            nums.splice(i, 1);
-        }
-    }
-};
-
 //two sums: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 const twoSum = function (nums, target) {
     const seenNums = {};

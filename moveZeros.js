@@ -6,9 +6,9 @@
  */
  var moveZeroes = function(nums) {
     //input array, output array 
+    //forEach through the given array (same thing as .map, except, it doesnt return a new array 
     nums.forEach((number, index) => {
     if (number === 0) {
-        //forEach through the given array (same thing as .map, except, it doesnt return a new array 
         nums.splice(index, 1);
         //if a zero is found, use .splice() to remove the element & also add a zero to the nums.length - 1 place 
         nums.push(0);

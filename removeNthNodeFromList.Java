@@ -1,4 +1,4 @@
-//Given the head of a linked list, remove the nth node from the end of the list and return its head.
+//Given the head of a linkedlist, remove the nth node from the end of the list and return its head.
 
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -17,7 +17,7 @@ class Solution {
             right = right.next;
             n-=1;
         }
-        //now shift both our pointers
+        //now shift both our pointer
         while(right!=null){
             right = right.next;
             left = left.next;
